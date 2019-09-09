@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "yarn styleguidist server"
+    "start": "yarn styleguidist server",
+    "postinstall": "webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
