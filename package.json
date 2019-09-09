@@ -1,8 +1,8 @@
 {
   "name": "yp-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UI framework for Youplus",
-  "main": "dist/rinse.js",
+  "main": "src/index.js",
   "license": "MIT",
   "browserslist": [
     ">1%",
@@ -12,8 +12,7 @@
   ],
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "yarn styleguidist server",
-    "postinstall": "webpack --mode=production"
+    "start": "yarn styleguidist server"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
