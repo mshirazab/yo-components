@@ -13,7 +13,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "yarn styleguidist server",
-    "postinstall": "npm run build"
+    "postinstall": "echo \"Lolol\" && npm run build --scripts-prepend-node-path"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
