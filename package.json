@@ -2,11 +2,8 @@
   "name": "yp-components",
   "version": "1.0.1",
   "description": "UI framework for Youplus",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
-  "sideEffects": [
-    "./src/index.js"
-  ],
   "browserslist": [
     ">1%",
     "last 1 version",
@@ -15,7 +12,8 @@
   ],
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "yarn styleguidist server"
+    "start": "yarn styleguidist server",
+    "postinstall": "npm --prefix ./node_modules/yp_components run build"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -31,6 +29,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "react-dom": "^16.9.0",
     "react-styleguidist": "^9.1.16",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8"
   },

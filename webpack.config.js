@@ -1,24 +1,28 @@
-const path = require("path");
+const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
+  mode: 'production',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "",
-    filename: "rinse.js",
-    libraryTarget: "umd"
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: '',
+    filename: 'index.js',
+    libraryTarget: 'umd',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
-      }
-    ]
+        loader: 'babel-loader',
+      },
+    ],
   },
-  resolve: {
-    extensions: [".js", ".jsx"]
-  },
-  mode: "production"
 };
