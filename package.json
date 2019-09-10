@@ -13,7 +13,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "yarn styleguidist server",
-    "postinstall": "npm --prefix ./node_modules/yp_components run build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
